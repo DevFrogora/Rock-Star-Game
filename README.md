@@ -17,6 +17,6 @@
     - we will have bag to collect collided star
 
 # UI
-    - Ui will update ui manager 
+    - Ui manager will update ui  
 
 communicating data between all the script we are using event delegate for loose coupling
