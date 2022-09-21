@@ -9,7 +9,7 @@ public class StarPool : MonoBehaviour
     public List<GameObject> starPool = new List<GameObject>();
     public int starPoolSize = 10;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         InstantiateStar();
     }

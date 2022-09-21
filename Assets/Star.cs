@@ -8,7 +8,9 @@ public class Star : MonoBehaviour
     public int id;
     void Awake()
     {
+
         id = IDGenerator.instance.GetStarId();
+
     }
 
 
