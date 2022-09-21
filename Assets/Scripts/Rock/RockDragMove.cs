@@ -6,8 +6,8 @@ public class RockDragMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 {
     private void Start()
     {
-
     }
+
     float deltaX, deltaZ;
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -75,7 +75,7 @@ public class RockDragMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
             //Vector3 clickedPos = (ray.origin + ray.direction * distance);
             //float offset = (transform.position - clickedPos) ;
-            transform.position = (ray.origin + ray.direction * distance); // moving ray from a origin upto given distance in the given direction = position
+            transform.position = ray.origin + (ray.direction * distance); // moving ray from a origin upto given distance in the given direction = position
 
         }
         //Debug.Log(eventData.delta);
