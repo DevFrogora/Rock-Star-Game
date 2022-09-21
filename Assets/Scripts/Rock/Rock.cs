@@ -6,10 +6,13 @@ public class Rock : MonoBehaviour
 {
     public int id;
     private int score=0;
+    public List<GameObject> collectedStar;
+    public Transform Bag;
     // Start is called before the first frame update
     RockDragMove rockDragMove;
     void Start()
     {
+        collectedStar = new List<GameObject>();
         rockDragMove = GetComponent<RockDragMove>();
         GameManager.instance.gameStart += Instance_gameStart;
         GameManager.instance.gameEnd += Instance_gameEnd;
@@ -33,6 +36,8 @@ public class Rock : MonoBehaviour
         if ( other.GetComponent<Star>() )
         {
             other.gameObject.SetActive(false);
+            other.gameObject.transform.parent = Bag.transform;
+            collectedStar.Add(other.gameObject);
         }
         score += 1;
         GameManager.instance.UpdateScore(score);
